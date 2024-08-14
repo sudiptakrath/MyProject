@@ -4,7 +4,7 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const formSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
   };
@@ -12,7 +12,7 @@ function LoginForm() {
   return (
     <div className="login-box">
       <h2>Login</h2>
-      <form onSubmit={formSubmit}>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
           <input

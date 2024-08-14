@@ -9,7 +9,7 @@ function SignUpForm() {
   const [password, setPassword] = useState("");
   const [registered, setRegistered] = useState(false);
 
-  const formSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setRegistered(true);
   };
@@ -17,7 +17,7 @@ function SignUpForm() {
   return (
     <div className="signup-box">
       <h2>Sign Up</h2>
-      <form onSubmit={formSubmit}>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input
